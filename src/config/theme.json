@@ -4,13 +4,13 @@
       "theme_color": {
         "primary": "#121212",
         "body": "#fff",
-        "border": "#eaeaea",
+        "border": "#F244B5",
         "light": "#f6f6f6",
-        "dark": "#040404"
+        "dark": "#121212"
       },
       "text_color": {
-        "text": "#444444",
-        "text_dark": "#040404",
+        "text": "#121212",
+        "text_dark": "#121212",
         "text_light": "#717171"
       }
     },
@@ -18,8 +18,8 @@
       "theme_color": {
         "primary": "#fff",
         "body": "#1c1c1c",
-        "border": "#3E3E3E",
-        "light": "#222222",
+        "border": "#F244B5",
+        "light": "#F244B5",
         "dark": "#fff"
       },
       "text_color": {
