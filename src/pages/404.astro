@@ -10,16 +10,21 @@ import Base from "@/layouts/Base.astro";
           <span
             class="text-[8rem] block font-bold text-text-dark dark:text-darkmode-text-dark"
           >
-            404
+            4<img
+              class="inline h-[1em] align-baseline"
+              src="public/images/submark.svg"
+              alt="Bandflower logomark in place of the 0 in 404"
+            />4
+            <h1 class="h2 mb-4">Page not found</h1>
+            <div class="content">
+              <p>
+                The page you are looking for might have been removed, had its
+                name changed, or is temporarily unavailable.
+              </p>
+            </div>
+            <a href="/" class="btn btn-primary mt-8 text-[1rem]">Back to home</a
+            >
           </span>
-          <h1 class="h2 mb-4">Page not found</h1>
-          <div class="content">
-            <p>
-              The page you are looking for might have been removed, had its name
-              changed, or is temporarily unavailable.
-            </p>
-          </div>
-          <a href="/" class="btn btn-primary mt-8">Back to home</a>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 ---
-title: "Blog Posts"
+title: "Latest Posts"
 meta_title: ""
-description: "this is meta description"
+description: "This is where all the posts go"
 image: ""
 draft: false
 ---
