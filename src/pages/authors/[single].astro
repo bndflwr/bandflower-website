@@ -29,7 +29,7 @@ const { Content } = await render(author);
 const BLOG_FOLDER = "blog";
 const posts = await getSinglePage(BLOG_FOLDER);
 const postFilterByAuthor = posts.filter(
-  (post) => slugify(post.data.author) === slugify(title)
+  (post) => slugify(post.data.author) === slugify(title),
 );
 ---
 
@@ -49,7 +49,7 @@ const postFilterByAuthor = posts.filter(
             image && (
               <ImageMod
                 src={image}
-                class="mx-auto mb-10 rounded"
+                class="mx-auto mb-10 rounded-tl-4xl rounded-br-4xl"
                 height={200}
                 width={200}
                 alt={title}
