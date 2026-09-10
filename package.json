@@ -25,6 +25,7 @@
     "@astrojs/react": "6.0.1",
     "@astrojs/sitemap": "3.7.3",
     "@digi4care/astro-google-tagmanager": "^2.0.0",
+    "@fontsource-variable/azeret-mono": "^5.3.0",
     "@justinribeiro/lite-youtube": "^1.9.0",
     "astro": "7.1.4",
     "astro-auto-import": "^0.5.2",

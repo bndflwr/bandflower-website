@@ -31,11 +31,11 @@
 }
 
 .nav-dropdown-list {
-  @apply bg-body dark:bg-darkmode-body z-10 min-w-[180px] rounded p-4 shadow-sm;
+  @apply bg-body dark:bg-darkmode-body z-10 min-w-45 rounded p-4 shadow-sm;
 }
 
 .nav-dropdown-item {
-  @apply [&:not(:last-child)]:mb-2;
+  @apply not-last:mb-2;
 }
 
 .nav-dropdown-link {

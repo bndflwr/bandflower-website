@@ -4,6 +4,7 @@ import ThemeSwitcher from "@/components/ThemeSwitcher.astro";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import { IoSearch } from "react-icons/io5";
+import HeaderLogo from "@/components/HeaderLogo.astro";
 
 export interface ChildNavigationLink {
   name: string;
@@ -22,12 +23,12 @@ const { navigation_button, settings } = config;
 const { pathname } = Astro.url;
 ---
 
-<header class={`header z-30 ${settings.sticky_header && "sticky top-0"}`}>
-  <nav class="navbar container">
-    <!-- logo -->
-    <div class="order-0">
-      <Logo />
-    </div>
+<header class="header z-30">
+  <!-- logo -->
+  <div class="flex justify-center py-4 border-b">
+    <HeaderLogo />
+  </div>
+  <nav class={`navbar container ${settings.sticky_header && "sticky top-0"}`}>
     <!-- navbar toggler -->
     <input id="nav-toggle" type="checkbox" class="hidden" />
     <label
@@ -48,7 +49,7 @@ const { pathname } = Astro.url;
     <!-- /navbar toggler -->
     <ul
       id="nav-menu"
-      class="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8"
+      class="navbar-nav bg-linear-to-t from-fuchsia-800 to-pink-500 order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8"
     >
       {
         main.map((menu) => (

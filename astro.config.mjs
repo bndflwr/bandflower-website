@@ -11,7 +11,6 @@ import sharp from "sharp";
 import config from "./src/config/config.json";
 import theme from "./src/config/theme.json";
 
-
 // Helper to parse font string format: "FontName:wght@400;500;600;700"
 function parseFontString(fontStr) {
   const [name, weightPart] = fontStr.split(":");
@@ -41,7 +40,7 @@ const fontsConfig = Object.entries(theme.fonts.font_family)
     return {
       name,
       cssVariable: `--font-${key}`,
-      provider: fontProviders.google(),
+      provider: fontProviders.fontsource(),
       weights,
       display: "swap",
       fallbacks: [fallback],

@@ -94,7 +94,7 @@ for (let i = 1; i <= totalPages; i++) {
       {hasNextPage ? (
         <a
           href={`${section ? "/" + section : ""}/page/${currentPage + 1}`}
-          class="rounded-tl-4xl rounded-br-4xl px-2 py-1.5 text-text-dark hover:bg-light dark:text-darkmode-text-dark dark:hover:bg-darkmode-light"
+          class="rounded-tl-2xl rounded-br-2xl px-2 py-1.5 text-text-dark hover:bg-light dark:text-darkmode-text-dark dark:hover:bg-darkmode-light"
         >
           <span class="sr-only">Next</span>
           <svg
@@ -112,7 +112,7 @@ for (let i = 1; i <= totalPages; i++) {
           </svg>
         </a>
       ) : (
-        <span class="rounded-tl-4xl rounded-br-4xl px-2 py-1.5 text-text-light">
+        <span class="rounded-tl-2xl rounded-br-2xl px-2 py-1.5 text-text-light">
           <span class="sr-only">Next</span>
           <svg
             viewBox="0 0 20 20"

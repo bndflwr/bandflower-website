@@ -31,23 +31,21 @@ const { title, image, date, author, categories } = data.data;
       {title}
     </a>
   </h4>
+  <li class="mr-4 inline-block">
+    {
+      categories.map((category: string, index: number) => (
+        <a href={`/categories/${slugify(category)}`}>
+          {humanize(category)}
+          {index !== categories.length - 1 && " / "}
+        </a>
+      ))
+    }
+  </li>
   <ul class="mb-4">
     <li class="mr-4 inline-block">
       <a href={`/authors/${slugify(author)}`}>
-        <FaRegUserCircle className={"mr-2 -mt-1 inline-block"} />
-        {humanize(author)}
+        By {humanize(author)}
       </a>
-    </li>
-    <li class="mr-4 inline-block">
-      <FaRegFolder className={"mr-2 -mt-1 inline-block"} />
-      {
-        categories.map((category: string, index: number) => (
-          <a href={`/categories/${slugify(category)}`}>
-            {humanize(category)}
-            {index !== categories.length - 1 && ","}
-          </a>
-        ))
-      }
     </li>
     {date && <li class="inline-block">{dateFormat(date)}</li>}
   </ul>
