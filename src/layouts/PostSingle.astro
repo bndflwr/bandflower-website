@@ -1,13 +1,11 @@
 ---
 import BlogCard from "@/components/BlogCard.astro";
 import Share from "@/components/Share.astro";
-import Disqus from "@/helpers/Disqus";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import dateFormat from "@/lib/utils/dateFormat";
 import similarItems from "@/lib/utils/similarItems";
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
 import { render } from "astro:content";
-import { FaRegClock, FaRegFolder, FaRegUserCircle } from "react-icons/fa";
 import ImageMod from "./components/ImageMod.astro";
 
 const COLLECTION_FOLDER = "blog";
@@ -40,24 +38,12 @@ const { title, description, author, categories, image, date, tags } = post.data;
         <h1 set:html={markdownify(title)} class="h2 mb-4" />
         <ul class="mb-4">
           <li class="mr-4 inline-block">
-            <a href={`/authors/${slugify(author)}`}>
-              <FaRegUserCircle className={"mr-2 -mt-1 inline-block"} />
+            By <a href={`/authors/${slugify(author)}`}>
               {humanize(author)}
             </a>
           </li>
+          <br />
           <li class="mr-4 inline-block">
-            <FaRegFolder className={"mr-2 -mt-1 inline-block"} />
-            {
-              categories.map((category: string, index: number) => (
-                <a href={`/categories/${slugify(category)}`}>
-                  {humanize(category)}
-                  {index !== categories.length - 1 && ","}
-                </a>
-              ))
-            }
-          </li>
-          <li class="mr-4 inline-block">
-            <FaRegClock className={"mr-2 -mt-1 inline-block"} />
             {dateFormat(date)}
           </li>
         </ul>
@@ -66,13 +52,30 @@ const { title, description, author, categories, image, date, tags } = post.data;
         </div>
         <div class="row items-start justify-between">
           <div class="mb-10 flex items-center lg:col-5 lg:mb-0">
+            <h5 class="mr-3">Categories :</h5>
+            <ul>
+              {
+                categories.map((category: string) => (
+                  <li class="inline-block">
+                    <a
+                      class="m-1 block rounded-tl-2xl rounded-br-2xl bg-light px-3 py-1 hover:bg-primary hover:text-white dark:bg-darkmode-light dark:hover:bg-darkmode-primary dark:hover:text-text-dark"
+                      href={`/categories/${slugify(category)}`}
+                    >
+                      {humanize(category)}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          <div class="mb-10 flex items-center lg:col-5 lg:mb-0">
             <h5 class="mr-3">Tags :</h5>
             <ul>
               {
                 tags.map((tag: string) => (
                   <li class="inline-block">
                     <a
-                      class="m-1 block rounded-tl-4xl rounded-br-4xl bg-light px-3 py-1 hover:bg-primary hover:text-white dark:bg-darkmode-light dark:hover:bg-darkmode-primary dark:hover:text-text-dark"
+                      class="m-1 block rounded-tl-2xl rounded-br-2xl bg-light px-3 py-1 hover:bg-primary hover:text-white dark:bg-darkmode-light dark:hover:bg-darkmode-primary dark:hover:text-text-dark"
                       href={`/tags/${slugify(tag)}`}
                     >
                       {humanize(tag)}
@@ -92,7 +95,6 @@ const { title, description, author, categories, image, date, tags } = post.data;
             />
           </div>
         </div>
-        <Disqus className="mt-20" client:only="react" />
       </article>
     </div>
 

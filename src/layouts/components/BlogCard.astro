@@ -2,7 +2,6 @@
 import config from "@/config/config.json";
 import dateFormat from "@/lib/utils/dateFormat";
 import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
-import { FaRegFolder, FaRegUserCircle } from "react-icons/fa";
 import ImageMod from "./ImageMod.astro";
 
 const {
@@ -31,16 +30,6 @@ const { title, image, date, author, categories } = data.data;
       {title}
     </a>
   </h4>
-  <li class="mr-4 inline-block">
-    {
-      categories.map((category: string, index: number) => (
-        <a href={`/categories/${slugify(category)}`}>
-          {humanize(category)}
-          {index !== categories.length - 1 && " / "}
-        </a>
-      ))
-    }
-  </li>
   <ul class="mb-4">
     <li class="mr-4 inline-block">
       <a href={`/authors/${slugify(author)}`}>
