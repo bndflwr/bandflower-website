@@ -21,13 +21,13 @@
   --color-darkmode-border: #F244B5;
   --color-darkmode-light: #F244B5;
   --color-darkmode-dark: #fff;
-  --color-darkmode-text: #B4AFB6;
+  --color-darkmode-text: #fff;
   --color-darkmode-text-dark: #fff;
-  --color-darkmode-text-light: #B4AFB6;
+  --color-darkmode-text-light: #fff;
 
   /* === Font Families === */
   --font-primary: Azeret Mono, mono;
-  --font-secondary: Azeret Mono, mono;
+  --font-secondary: Blackout Midnight, sans serif;
 
   /* === Font Sizes === */
   --text-base: 16px;

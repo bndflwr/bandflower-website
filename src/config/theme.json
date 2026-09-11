@@ -23,9 +23,9 @@
         "dark": "#fff"
       },
       "text_color": {
-        "text": "#B4AFB6",
+        "text": "#fff",
         "text_dark": "#fff",
-        "text_light": "#B4AFB6"
+        "text_light": "#fff"
       }
     }
   },
@@ -33,8 +33,8 @@
     "font_family": {
       "primary": "Azeret Mono:wght@400;600",
       "primary_type": "mono",
-      "secondary": "Azeret Mono:wght@500;700",
-      "secondary_type": "mono"
+      "secondary": "Blackout Midnight:wght@500;700",
+      "secondary_type": "sans serif"
     },
     "font_size": {
       "base": "16",
