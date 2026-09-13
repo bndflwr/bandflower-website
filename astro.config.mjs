@@ -40,7 +40,7 @@ const fontsConfig = Object.entries(theme.fonts.font_family)
     return {
       name,
       cssVariable: `--font-${key}`,
-      provider: fontProviders.fontsource(),
+      provider: fontProviders.fontsource() || fontProviders.local(),
       weights,
       display: "swap",
       fallbacks: [fallback],
@@ -79,7 +79,7 @@ export default defineConfig({
       options: {
         variants: [
           {
-            src: ["src/fonts/ariasolid-Regular.woff2"],
+            src: ["src/fonts/ariasolid.woff2"],
             weight: "normal",
             style: "normal",
           },

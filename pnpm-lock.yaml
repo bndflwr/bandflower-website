@@ -47,6 +47,9 @@ importers:
       disqus-react:
         specifier: ^1.1.7
         version: 1.1.7(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      fontaine:
+        specifier: ^0.8.1
+        version: 0.8.1(esbuild@0.28.1)(postcss@8.5.23)(rolldown@1.1.5)(vite@8.1.5(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
       github-slugger:
         specifier: ^2.0.0
         version: 2.0.0
@@ -1911,6 +1914,15 @@ packages:
   fontace@0.4.1:
     resolution: {integrity: sha512-lDMvbAzSnHmbYMTEld5qdtvNH2/pWpICOqpean9IgC7vUbUJc3k+k5Dokp85CegamqQpFbXf0rAVkbzpyTA8aw==}
 
+  fontaine@0.8.1:
+    resolution: {integrity: sha512-IA3MDtmvstTwnyuZTUD1IL42qTR6lI6ND3DEGBHLT5alcBeC/0jo+4jN5XFgG+E7HoPqJqlAUuIL+MhGonyCbQ==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    peerDependencies:
+      postcss: ^8.4.31
+    peerDependenciesMeta:
+      postcss:
+        optional: true
+
   fontkitten@1.0.3:
     resolution: {integrity: sha512-Wp1zXWPVUPBmfoa3Cqc9ctaKuzKAV6uLstRqlR56kSjplf5uAce+qeyYym7F+PHbGTk+tCEdkCW6RD7DX/gBZw==}
     engines: {node: '>=20'}
@@ -2286,6 +2298,9 @@ packages:
 
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
+
+  magic-regexp@0.11.0:
+    resolution: {integrity: sha512-LG77Z/gVnwz7oaDpD4heX6ryl+lcr4l1B2gnP4MMvt2pGhGC1Dfj7dl1pXpP4ih+VQFLuAadeKVa+lARAzfW+Q==}
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
@@ -2798,6 +2813,10 @@ packages:
   regex@6.1.0:
     resolution: {integrity: sha512-6VwtthbV4o/7+OaAF9I5L5V3llLEsoPyq9P1JVXkedTP33c7MfCG0/5NOPcSJn0TzXcG9YUrR0gQSWioew3LDg==}
 
+  regexp-tree@0.1.27:
+    resolution: {integrity: sha512-iETxpjK6YoRWJG5o6hXLwvjYAoW+FEZn9os0PD/b6AP6xQwsa/Y7lCVgIixBbUPMfhu+i2LtdeAqVTgGlQarfA==}
+    hasBin: true
+
   rehype-raw@7.0.0:
     resolution: {integrity: sha512-/aE8hCfKlQeA8LmyeyQvQF3eBiLRGNlfBJEvWH7ivp9sBqs7TNqBL5X3v157rM4IFETqDnIOO+z5M/biZbo9Ww==}
 
@@ -3042,6 +3061,9 @@ packages:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
 
+  type-level-regexp@0.1.17:
+    resolution: {integrity: sha512-wTk4DH3cxwk196uGLK/E9pE45aLfeKJacKmcEgEOA/q5dnPGNxXt0cfYdFxb57L+sEpf1oJH4Dnx/pnRcku9jg==}
+
   typesafe-path@0.2.2:
     resolution: {integrity: sha512-OJabfkAg1WLZSqJAJ0Z6Sdt3utnbzr/jh+NAHoyWHJe8CMSy79Gm085094M9nvTPy22KzTVn5Zq5mbapCI/hPA==}
 
@@ -3110,6 +3132,39 @@ packages:
 
   unist-util-visit@5.1.0:
     resolution: {integrity: sha512-m+vIdyeCOpdr/QeQCu2EzxX/ohgS8KbnPDgFni4dQsfSCtpz8UqDyY5GjRru8PDKuYn7Fq19j1CQ+nJSsGKOzg==}
+
+  unplugin@3.3.0:
+    resolution: {integrity: sha512-qa66K+crbfyE6JK10GjvbJeRrOsuC/JpbnHctfyp/i4oBTxWOzJfRZyDiOk1PtErMFRu8JhsU/wPvOdBNWe5Rg==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    peerDependencies:
+      '@farmfe/core': '*'
+      '@rspack/core': '*'
+      bun-types-no-globals: '*'
+      esbuild: '*'
+      rolldown: '*'
+      rollup: '*'
+      unloader: '*'
+      vite: '*'
+      webpack: '*'
+    peerDependenciesMeta:
+      '@farmfe/core':
+        optional: true
+      '@rspack/core':
+        optional: true
+      bun-types-no-globals:
+        optional: true
+      esbuild:
+        optional: true
+      rolldown:
+        optional: true
+      rollup:
+        optional: true
+      unloader:
+        optional: true
+      vite:
+        optional: true
+      webpack:
+        optional: true
 
   unstorage@1.17.5:
     resolution: {integrity: sha512-0i3iqvRfx29hkNntHyQvJTpf5W9dQ9ZadSoRU8+xVlhVtT7jAX57fazYO9EHvcRCfBCyi5YRya7XCDOsbTgkPg==}
@@ -3349,6 +3404,9 @@ packages:
 
   web-namespaces@2.0.1:
     resolution: {integrity: sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==}
+
+  webpack-virtual-modules@0.6.2:
+    resolution: {integrity: sha512-66/V2i5hQanC51vBQKPH4aI8NMAcBW59FVBs+rC7eGHupMyfn34q7rZIE+ETlJ+XTevqfUhVVBgSUNSW2flEUQ==}
 
   which@2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
@@ -5198,6 +5256,28 @@ snapshots:
     dependencies:
       fontkitten: 1.0.3
 
+  fontaine@0.8.1(esbuild@0.28.1)(postcss@8.5.23)(rolldown@1.1.5)(vite@8.1.5(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0)):
+    dependencies:
+      '@capsizecss/unpack': 4.0.1
+      css-tree: 3.2.1
+      magic-regexp: 0.11.0(esbuild@0.28.1)(rolldown@1.1.5)(vite@8.1.5(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
+      magic-string: 1.1.0
+      pathe: 2.0.3
+      ufo: 1.6.4
+      unplugin: 3.3.0(esbuild@0.28.1)(rolldown@1.1.5)(vite@8.1.5(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
+    optionalDependencies:
+      postcss: 8.5.23
+    transitivePeerDependencies:
+      - '@farmfe/core'
+      - '@rspack/core'
+      - bun-types-no-globals
+      - esbuild
+      - rolldown
+      - rollup
+      - unloader
+      - vite
+      - webpack
+
   fontkitten@1.0.3:
     dependencies:
       tiny-inflate: 1.0.3
@@ -5579,6 +5659,23 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  magic-regexp@0.11.0(esbuild@0.28.1)(rolldown@1.1.5)(vite@8.1.5(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0)):
+    dependencies:
+      magic-string: 0.30.21
+      regexp-tree: 0.1.27
+      type-level-regexp: 0.1.17
+      unplugin: 3.3.0(esbuild@0.28.1)(rolldown@1.1.5)(vite@8.1.5(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
+    transitivePeerDependencies:
+      - '@farmfe/core'
+      - '@rspack/core'
+      - bun-types-no-globals
+      - esbuild
+      - rolldown
+      - rollup
+      - unloader
+      - vite
+      - webpack
 
   magic-string@0.30.21:
     dependencies:
@@ -6317,6 +6414,8 @@ snapshots:
     dependencies:
       regex-utilities: 2.3.0
 
+  regexp-tree@0.1.27: {}
+
   rehype-raw@7.0.0:
     dependencies:
       '@types/hast': 3.0.5
@@ -6678,6 +6777,8 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
 
+  type-level-regexp@0.1.17: {}
+
   typesafe-path@0.2.2: {}
 
   typescript-auto-import-cache@0.3.6:
@@ -6763,6 +6864,16 @@ snapshots:
       '@types/unist': 3.0.3
       unist-util-is: 6.0.1
       unist-util-visit-parents: 6.0.2
+
+  unplugin@3.3.0(esbuild@0.28.1)(rolldown@1.1.5)(vite@8.1.5(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0)):
+    dependencies:
+      '@jridgewell/remapping': 2.3.5
+      picomatch: 4.0.5
+      webpack-virtual-modules: 0.6.2
+    optionalDependencies:
+      esbuild: 0.28.1
+      rolldown: 1.1.5
+      vite: 8.1.5(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0)
 
   unstorage@1.17.5:
     dependencies:
@@ -6927,6 +7038,8 @@ snapshots:
   vscode-uri@3.1.0: {}
 
   web-namespaces@2.0.1: {}
+
+  webpack-virtual-modules@0.6.2: {}
 
   which@2.0.2:
     dependencies:

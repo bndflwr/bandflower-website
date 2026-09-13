@@ -33,7 +33,7 @@
     "font_family": {
       "primary": "Azeret Mono:wght@400;600",
       "primary_type": "mono",
-      "secondary": "Aria Solid:wght@500;700",
+      "secondary": "Aria Solid",
       "secondary_type": "display"
     },
     "font_size": {
