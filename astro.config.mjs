@@ -54,7 +54,39 @@ export default defineConfig({
   trailingSlash: config.site.trailing_slash ? "always" : "never",
   image: { service: sharp() },
   vite: { plugins: [tailwindcss()] },
-  fonts: fontsConfig,
+  fonts: [
+    ...fontsConfig,
+    // more config objects here
+    {
+      provider: fontProviders.fontsource(),
+      name: "Azeret Mono",
+      cssVariable: "--font-azeret-mono",
+    },
+    {
+      provider: fontProviders.fontsource(),
+      name: "Blackout Midnight",
+      cssVariable: "--font-blackout-midnight",
+    },
+    {
+      provider: fontProviders.fontsource(),
+      name: "Blackout 2AM",
+      cssVariable: "--font-blackout-two-am",
+    },
+    {
+      provider: fontProviders.local(),
+      name: "Aria Solid",
+      cssVariable: "--font-aria-solid",
+      options: {
+        variants: [
+          {
+            src: ["src/fonts/ariasolid-Regular.woff2"],
+            weight: "normal",
+            style: "normal",
+          },
+        ],
+      },
+    },
+  ],
 
   integrations: [
     react(),

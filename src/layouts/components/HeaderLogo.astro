@@ -23,13 +23,13 @@ const {
 const { theme_switcher }: { theme_switcher: boolean } = config.settings;
 ---
 
-<a href="/" class="h-16 w-auto">
+<a href="/" class="w-full h-auto">
   {
     src || srcDarkmode || logo || logo_darkmode ? (
       <>
         <ImageMod
           src={src ? src : logo}
-          class={`h-16 w-auto ${theme_switcher && "dark:hidden"}`}
+          class={`${theme_switcher && "dark:hidden"}`}
           width={logo_width.replace("px", "") * 5}
           height={logo_height.replace("px", "") * 5}
           alt={title}
